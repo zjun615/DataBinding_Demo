@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="src1"
+            type="String" />
+
+        <variable
+            name="src2"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.zjun.databinding.demo.ImageViewActivity">
+
+        <!--使用自定义属性imgSrc-->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            app:imgSrc="@{src1}" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            app:imgSrc="@{src2}" />
+
+    </RelativeLayout>
+</layout>

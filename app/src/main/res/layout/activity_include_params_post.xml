@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--为了传递数据给子布局，需要添加自定义属性，先添加命名空间app-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.zjun.databinding.demo.bean.User" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_click_listen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_vertical_margin"
+        tools:context="com.zjun.databinding.demo.IncludeParamsPostActivity">
+
+        <!--通过app:user来传递数据-->
+        <include
+            layout="@layout/layout_include_params"
+            app:user="@{user}" />
+    </RelativeLayout>
+</layout>

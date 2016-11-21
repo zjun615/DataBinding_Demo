@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_list_view"
+        android:orderInCategory="100"
+        android:title="@string/listView"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_grid_view"
+        android:orderInCategory="100"
+        android:title="@string/gridView"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_hor_list_view"
+        android:orderInCategory="100"
+        android:title="@string/horizontalListView"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_hor_grid_view"
+        android:orderInCategory="100"
+        android:title="@string/horizontalGridView"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_list_view_header"
+        android:orderInCategory="100"
+        android:title="@string/listView_Header"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_list_view_footer"
+        android:orderInCategory="100"
+        android:title="@string/listView_Footer"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_staggered_view"
+        android:orderInCategory="100"
+        android:title="@string/staggeredView"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_update"
+        android:orderInCategory="100"
+        android:title="@string/version_update"
+        app:showAsAction="never" />
+
+</menu>

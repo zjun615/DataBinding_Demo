@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.zjun.databinding.demo.bean.User" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_fast_use"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin"
+        tools:context="com.zjun.databinding.demo.FastUseActivity">
+
+        <LinearLayout style="@style/StyleItemParent">
+
+            <Button
+                android:id="@+id/btn_load"
+                style="@style/StyleBeforeText"
+                android:text="数据1" />
+
+            <Button
+                android:id="@+id/btn_change"
+                style="@style/StyleBeforeText"
+                android:text="数据2" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/StyleItemParent">
+
+            <TextView
+                style="@style/StyleBeforeText"
+                android:text="姓名：" />
+
+            <TextView
+                style="@style/StyleAfterText"
+                android:onClick="@{user.onNameClick}"
+                android:text="@{user.name}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleItemParent">
+
+            <TextView
+                style="@style/StyleBeforeText"
+                android:layout_height="wrap_content"
+                android:text="昵称：" />
+
+            <TextView
+                style="@style/StyleAfterText"
+                android:onLongClick="@{user.onNicknameLongClick}"
+                android:text="@{user.nickname ?? user.name}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleItemParent">
+
+            <TextView
+                style="@style/StyleBeforeText"
+                android:text="性别：" />
+
+            <TextView
+                style="@style/StyleAfterText"
+                android:text='@{user.male ? @string/male : @string/female}'
+                android:textColor="@{user.male ? 0xFF0000FF : 0xFFFF0000}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleItemParent">
+
+            <TextView
+                style="@style/StyleBeforeText"
+                android:text="年龄：" />
+
+            <TextView
+                style="@style/StyleAfterText"
+                android:text='@{String.valueOf(user.age) + " years old"}'
+                android:textColor="@{user.age &lt; 14  || user.age &gt; 65 ? 0xFFFF0000 : 0xFF000000}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

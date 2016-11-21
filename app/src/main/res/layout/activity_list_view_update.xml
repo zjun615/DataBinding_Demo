@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data >
+        <variable
+            name="lvAdapter"
+            type="android.widget.BaseAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.zjun.databinding.demo.ListViewActivity">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:Adapter="@{lvAdapter}"
+            />
+    </RelativeLayout>
+</layout>

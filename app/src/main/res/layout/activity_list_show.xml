@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--import导入User类，与java代码的作用一样。这样下面可以直接引用，否则要写完整的包名+类名-->
+        <import type="com.zjun.databinding.demo.bean.User" />
+
+        <variable
+            name="userList"
+            type="java.util.List&lt;User&gt;" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_list_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin"
+        tools:context="com.zjun.databinding.demo.ListShowActivity">
+
+        <!--与操作数组一样，用中括号获取List中的对象-->
+        <include
+            layout="@layout/layout_include_list"
+            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            app:user="@{userList[0]}" />
+
+        <include
+            layout="@layout/layout_include_list"
+            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            app:user="@{userList[1]}" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data >
+
+        <variable
+            name="rvLayoutManager"
+            type="android.support.v7.widget.LinearLayoutManager" />
+        <variable
+            name="rvAdapter"
+            type="com.zjun.databinding.demo.adapter.RVAdapter" />
+            <!--或：type="android.support.v7.widget.RecyclerView.Adapter" />-->
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.zjun.databinding.demo.ListViewActivity">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{rvLayoutManager}"
+            app:adapter="@{rvAdapter}"
+            />
+    </RelativeLayout>
+</layout>

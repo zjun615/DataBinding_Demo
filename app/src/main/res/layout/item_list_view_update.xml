@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="member"
+            type="com.zjun.databinding.demo.bean.Member" />
+
+    </data>
+
+    <!--设置点击事件-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:onClick="@{member.onItemClick}">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:imageUrl="@{member.icon}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{member.name}" />
+    </LinearLayout>
+</layout>
